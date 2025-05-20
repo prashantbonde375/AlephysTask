@@ -11,7 +11,7 @@ public class ExpenseTracker {
 
     public static void main(String[] args) {
         while (true) {
-            System.out.println("\n--- Expense Tracker ---");
+            System.out.println("\n--- Expense Tracker ---\n");
             System.out.println("1. Add Income");
             System.out.println("2. Add Expense");
             System.out.println("3. View Monthly Summary");
@@ -37,7 +37,7 @@ public class ExpenseTracker {
     }
 
     private static void addTransaction(String type) {
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         System.out.print("Enter Date (yyyy-MM-dd): ");
         LocalDate date = LocalDate.parse(scanner.nextLine());
 
@@ -61,14 +61,14 @@ public class ExpenseTracker {
     }
 
     private static void loadFromFile() {
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         System.out.print("Enter file path: ");
         String filePath = scanner.nextLine();
         manager.loadFromFile(filePath);
     }
 
     private static void saveToFile() {
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         System.out.print("Enter file path to save: ");
         String filePath = scanner.nextLine();
         manager.saveToFile(filePath);

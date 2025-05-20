@@ -3,7 +3,7 @@ package model;
 import java.time.LocalDate;
 
 public class Transaction {
-    private String type; // INCOME or EXPENSE
+    private String type;
     private LocalDate date;
     private String category;
     private double amount;
